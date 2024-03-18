@@ -1,0 +1,428 @@
+@charset "UTF-8";
+.svg-mask {
+  position: absolute;
+}
+
+.container .container-inner {
+  background-color: #efe6dd;
+  overflow: hidden;
+}
+.container .container-inner .visual-section {
+  position: relative;
+  padding: 20px 116px;
+  height: 100vh;
+}
+.container .container-inner .visual-section .pix {
+  position: fixed;
+  top: 20px;
+  left: 116px;
+  height: 28px;
+  font-family: "PartialSansKR-Regular";
+  font-size: 28px;
+  font-weight: 700;
+  z-index: 999;
+  cursor: default;
+}
+.container .container-inner .visual-section .pix .p {
+  color: #433633;
+}
+.container .container-inner .visual-section .pix .i {
+  color: #8f857d;
+}
+.container .container-inner .visual-section .pix .x {
+  color: #5c5552;
+}
+.container .container-inner .visual-section .pix .member-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: 0.3s ease;
+}
+.container .container-inner .visual-section .pix .member-wrap .member {
+  font-family: "Classic";
+  font-size: 16px;
+  line-height: 24px;
+}
+.container .container-inner .visual-section .pix:hover .member-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+.container .container-inner .visual-section .anchor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 300px;
+  z-index: 999;
+}
+.container .container-inner .visual-section .anchor-list button {
+  padding: 9px 22px;
+  border-radius: 32px;
+  background-color: #171717;
+  border: 2px solid #171717;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.container .container-inner .visual-section .anchor-list button:hover {
+  background-color: #fff;
+  color: #171717;
+}
+.container .container-inner .contents-section {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+.container .container-inner .contents-section .intro {
+  position: relative;
+  padding-left: 50%;
+  padding-right: 290px;
+}
+.container .container-inner .contents-section .intro .visual-title-wrap {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  width: 100%;
+  z-index: 1;
+}
+.container .container-inner .contents-section .intro .visual-title-wrap .title {
+  font-family: "PartialSansKR-Regular";
+  font-weight: 700;
+  letter-spacing: 36px;
+}
+.container .container-inner .contents-section .intro .visual-title-wrap .title.title-no {
+  font-size: 365px;
+  color: #bb4430;
+}
+.container .container-inner .contents-section .intro .visual-title-wrap .title.title-code {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 212px;
+}
+.container .container-inner .contents-section .intro .intro-list .tit {
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  color: #bb4430;
+}
+.container .container-inner .contents-section .intro .intro-list .tit::before {
+  content: "▶ ";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  font-size: 21px;
+  transform: translateY(-50%);
+}
+.container .container-inner .contents-section .intro .intro-list .tit + .nr-list {
+  padding-top: 30px;
+}
+.container .container-inner .contents-section .intro .intro-list .nr-list .des {
+  line-height: 24px;
+  font-size: 16px;
+}
+.container .container-inner .contents-section .intro .intro-list + .intro-list {
+  padding-top: 100px;
+}
+.container .container-inner .contents-section .project .project-list .project-item .logo-area {
+  position: relative;
+  height: 55vh;
+}
+.container .container-inner .contents-section .project .project-list .project-item .logo-area .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  pointer-events: none;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents {
+  position: relative;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .tit {
+  margin-bottom: 60vh;
+  font-family: "Classic";
+  font-size: 180px;
+  font-weight: 700;
+  text-align: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .s-tit {
+  font-family: "Bagel";
+  font-size: 128px;
+  font-weight: 100;
+  text-align: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .back-project {
+  position: relative;
+  display: block;
+  height: 680px;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .back-project:hover::before {
+  opacity: 1;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .back-project:hover::after {
+  opacity: 1;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .back-project::before {
+  content: "view page";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Classic";
+  font-size: 48px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.container .container-inner .contents-section .project .project-list .project-item .project-contents .nr-list .back-project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 32px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .logo {
+  transform: translate(-50%, 0%);
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .tit {
+  color: #F2DDA4;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .box-area {
+  gap: 12px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .s-tit {
+  color: #F2DDA4;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .box-list .box-item {
+  width: 1024px;
+  background-color: #F2DDA4;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .box-list .des {
+  color: #262626;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .box-list.strength .box-item, .container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .box-list.weakness .box-item {
+  width: 750px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .back-project {
+  background: url("https://95choijh.github.io/noCode/dist/assets/images/project-bubble.png") no-repeat;
+  background-position: 0 -1px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .back-project:hover::before {
+  color: #262626;
+}
+.container .container-inner .contents-section .project .project-list .project-item.bubble .project-contents .nr-list .item .back-project:hover::after {
+  background-color: #F2DDA4;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .logo {
+  transform: translate(-50%, 60%);
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .tit {
+  color: #503636;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .box-area {
+  gap: 12px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .s-tit {
+  color: #503636;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .box-list .box-item {
+  width: 1024px;
+  background-color: #503636;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .box-list .des {
+  color: #ffffff;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .box-list.strength .box-item, .container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .box-list.weakness .box-item {
+  width: 750px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .back-project {
+  background: url("https://95choijh.github.io/noCode/dist/assets/images/project-softr.png") no-repeat;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .back-project:hover::before {
+  color: #ffffff;
+}
+.container .container-inner .contents-section .project .project-list .project-item.glide .project-contents .nr-list .item .back-project:hover::after {
+  background-color: #503636;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .logo {
+  transform: translate(-50%, 20%);
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .tit {
+  color: #6f4620;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .box-area {
+  gap: 12px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .s-tit {
+  color: #6f4620;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .box-list .box-item {
+  width: 1024px;
+  background-color: #6f4620;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .box-list .des {
+  color: #fac66c;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .box-list.strength .box-item, .container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .box-list.weakness .box-item {
+  width: 750px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .back-project {
+  background: url("https://95choijh.github.io/noCode/dist/assets/images/project-softr.png") no-repeat;
+  background-position: center -100px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .back-project:hover::before {
+  color: #fac66c;
+}
+.container .container-inner .contents-section .project .project-list .project-item.softr .project-contents .nr-list .item .back-project:hover::after {
+  background-color: #6f4620;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .logo {
+  transform: translate(-50%, 20%);
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .tit {
+  color: #CDF7F6;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .s-tit {
+  color: #CDF7F6;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .box-list .box-item {
+  width: 906px;
+  background-color: #CDF7F6;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .box-list .des {
+  color: #4353FF;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .back-project {
+  background: url("https://95choijh.github.io/noCode/dist/assets/images/project-webflow.png") no-repeat;
+  width: 100%;
+  background-position: center -100px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .back-project:hover::before {
+  color: #4353FF;
+}
+.container .container-inner .contents-section .project .project-list .project-item.webflow .project-contents .nr-list .item .back-project:hover::after {
+  background-color: #CDF7F6;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .logo {
+  transform: translate(-50%, 20%);
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .tit {
+  color: #282b44;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .s-tit {
+  color: #282b44;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-area {
+  gap: 12px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list .box-item {
+  width: 845px;
+  background-color: #282b44;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list .des {
+  color: #ffffff;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list .des a {
+  color: #fff;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list.use .des {
+  display: flex;
+  gap: 12px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list.strength .box-item, .container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .box-list.weakness .box-item {
+  width: 750px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .back-project {
+  background: url("https://95choijh.github.io/noCode/dist/assets/images/project-storybook.png") no-repeat;
+  background-position: center -100px;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .back-project:hover::before {
+  color: #ffffff;
+}
+.container .container-inner .contents-section .project .project-list .project-item.storybook .project-contents .nr-list .item .back-project:hover::after {
+  background-color: #282b44;
+}
+
+.flex {
+  display: flex;
+}
+
+.nr-list.case1 .item + .item {
+  padding-top: 20px;
+}
+.nr-list.case2 .item + .item {
+  padding-top: 15vh;
+}
+
+.box-list.case1 .box-item {
+  padding: 32px;
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+.box-list.case1 .box-item .des {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.box-list.case1 .box-item .des .subject {
+  flex-shrink: 0;
+  align-self: center;
+  padding: 4px 6px;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #282b44;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.box-list.case1 .box-item .des + .des {
+  padding-top: 20px;
+}
+.box-list.case1 .box-item + .box-item {
+  margin-top: 20px;
+}
+.box-list.case2 .box-item {
+  border-radius: 32px;
+  overflow: hidden;
+}

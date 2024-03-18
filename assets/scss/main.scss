@@ -209,6 +209,9 @@
                                 .tit {
                                     color: #F2DDA4;
                                 }
+                                .box-area {
+                                    gap: 12px;
+                                }
                                 .nr-list {
                                     .item {
                                         display: flex;
@@ -226,10 +229,16 @@
                                             .des {
                                                 color: #262626;
                                             }
+                                            &.strength,
+                                            &.weakness {
+                                                .box-item {
+                                                    width: 750px;
+                                                }
+                                            }
                                         }
                                         .back-project {
-                                            // background: url('https://95choijh.github.io/noCode/dist/assets/images/project-softr.png') no-repeat;
-                                            // background-position: center -100px;
+                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-bubble.png') no-repeat;
+                                            background-position: 0 -1px;
                                             &:hover {
                                                 &::before {
                                                     color: #262626;
@@ -251,6 +260,9 @@
                                 .tit {
                                     color: #503636;
                                 }
+                                .box-area {
+                                    gap: 12px;
+                                }
                                 .nr-list {
                                     .item {
                                         display: flex;
@@ -268,9 +280,15 @@
                                             .des {
                                                 color: #ffffff;
                                             }
+                                            &.strength,
+                                            &.weakness {
+                                                .box-item {
+                                                    width: 750px;
+                                                }
+                                            }
                                         }
                                         .back-project {
-                                            // background: url('https://95choijh.github.io/noCode/dist/assets/images/project-softr.png') no-repeat;
+                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-softr.png') no-repeat;
                                             // background-position: center -100px;
                                             &:hover {
                                                 &::before {
@@ -293,6 +311,9 @@
                                 .tit {
                                     color: #6f4620;
                                 }
+                                .box-area {
+                                    gap: 12px;
+                                }
                                 .nr-list {
                                     .item {
                                         display: flex;
@@ -309,6 +330,12 @@
                                             }
                                             .des {
                                                 color: #fac66c;
+                                            }
+                                            &.strength,
+                                            &.weakness {
+                                                .box-item {
+                                                    width: 750px;
+                                                }
                                             }
                                         }
                                         .back-project {
