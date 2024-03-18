@@ -116,18 +116,6 @@ gsap.to(bubbleLogo,{
     transform: "translate(3575%, -80%) scale(200)"
 })
 
-gsap.to(glideLogo,{
-    scrollTrigger: {
-        trigger: glideLogoArea,
-        pin: glideLogoArea,
-        start: "top top",
-        end: "top+=200% top",
-        scrub: 0.5,
-    },
-    ease: "power4.in",
-    transform: "translate(-1000%, -1000%) scale(200)"
-})
-
 gsap.to(softrLogo,{
     scrollTrigger: {
         trigger: softrLogoArea,
@@ -151,6 +139,18 @@ gsap.to(webFlowLogo,{
     transform: "translate(0, 5000%) scale(200)"
 })
 
+gsap.to(glideLogo,{
+    scrollTrigger: {
+        trigger: glideLogoArea,
+        pin: glideLogoArea,
+        start: "top top",
+        end: "top+=200% top",
+        scrub: 0.5,
+    },
+    ease: "power4.in",
+    transform: "translate(-1000%, -1000%) scale(200)"
+})
+
 gsap.to(storybookLogo,{
     scrollTrigger: {
         trigger: storybookLogoArea,
@@ -162,4 +162,3 @@ gsap.to(storybookLogo,{
     ease: "power4.in",
     transform: "translate(0, 0%) scale(250)"
 })
-
