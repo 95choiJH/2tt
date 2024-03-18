@@ -3,7 +3,7 @@
 }
 .container {
     .container-inner {
-        background-color: #efe6dd;
+        background-color: #0D0D0D;
         overflow: hidden;
         .visual-section {
             position: relative;
@@ -20,13 +20,13 @@
                 z-index: 999;
                 cursor: default;
                 .p {
-                    color: #433633;
+                    color: #A6A6A6;
                 }
                 .i {
-                    color: #8f857d;
+                    color: #F2F2F2;
                 }
                 .x {
-                    color: #5c5552;
+                    color: #262626;
                 }
                 .member-wrap {
                     display: flex;
@@ -93,13 +93,15 @@
                         letter-spacing: 36px;
                         &.title-no {
                             font-size: 365px;
-                            color: #bb4430;
+                            color: #f2f2f2;
                         }
                         &.title-code {
                             position: absolute;
                             top: 40%;
                             left: 40%;
                             font-size: 212px;
+                            color: #A6A6A6;
+
                         }
                     }
                 }
@@ -108,7 +110,7 @@
                         position: relative;
                         font-size: 36px;
                         font-weight: 700;
-                        color: #bb4430;
+                        color: #0D0D0D;
                         &::before {
                             content: '▶ ';
                             position: absolute;
@@ -125,6 +127,7 @@
                         .des {
                             line-height: 24px;
                             font-size: 16px;
+                            color: #262626;
                         }
                     }
                     +.intro-list {

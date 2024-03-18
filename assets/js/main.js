@@ -1,6 +1,7 @@
 
 gsap.registerPlugin(ScrollTrigger) 
 
+const containerInner = document.querySelector('.container-inner')
 const visualSection = document.querySelector('.visual-section')
 const contentsSection = document.querySelector('.contents-section')
 const intro = contentsSection.querySelector('.intro')
@@ -62,12 +63,30 @@ gsap.to(visualTitle, {
         scrub: true,
     },
 })
+gsap.to(containerInner, {
+    scrollTrigger: {
+        trigger: intro,
+        start: "-=80% top",
+        end: "50% bottom",
+        scrub: true,
+    },
+    backgroundColor: "#F2F2F2"
+})
+gsap.to(titleNo, {
+    scrollTrigger: {
+        trigger: intro,
+        start: "-=80% top",
+        end: "50% bottom",
+        scrub: true,
+    },
+    color: "#0D0D0D"
+})
 
 gsap.to(titleNo, {
     scrollTrigger: {
         trigger: intro,
         start: "top bottom",
-        end: "bottom bottom",
+        end: "60% bottom",
         scrub: true,
     },
     fontSize: "215px"
@@ -77,7 +96,7 @@ gsap.to(titleCode, {
     scrollTrigger: {
         trigger: intro,
         start: "top bottom",
-        end: "bottom bottom",
+        end: "60% bottom",
         scrub: true,
     },
     top: "60%",
@@ -118,7 +137,7 @@ gsap.to(softrLogo,{
         scrub: 0.5,
     },
     ease: "power4.in",
-    transform: "translate(0, 3500%) scale(200)"
+    transform: "translate(0, 3000%) scale(200)"
 })
 gsap.to(webFlowLogo,{
     scrollTrigger: {
