@@ -5,9 +5,11 @@ const containerInner = document.querySelector('.container-inner')
 const visualSection = document.querySelector('.visual-section')
 const contentsSection = document.querySelector('.contents-section')
 const intro = contentsSection.querySelector('.intro')
-const visualTitle = contentsSection.querySelector('.visual-title-wrap')
+const visualTitle = intro.querySelector('.visual-title-wrap')
 const titleNo = visualTitle.querySelector('.title-no')
 const titleCode = visualTitle.querySelector('.title-code')
+const titleAnd = visualTitle.querySelector('.title-and')
+const titleStorybook = visualTitle.querySelector('.title-storybook')
 const project = contentsSection.querySelector('.project-list')
 const bubble = project.querySelector('.bubble')
 const bubbleLogoArea = bubble.querySelector('.logo-area')
@@ -21,9 +23,12 @@ const softrLogo = softr.querySelector('.logo')
 const webFlow = project.querySelector('.webflow')
 const webFlowLogoArea = webFlow.querySelector('.logo-area')
 const webFlowLogo = webFlow.querySelector('.logo')
-const storybook = project.querySelector('.storybook')
+const storybook = document.querySelector('.project-storybook')
 const storybookLogoArea = storybook.querySelector('.logo-area')
 const storybookLogo = storybook.querySelector('.logo')
+const ending = document.querySelector('.ending')
+const endingStorybookWrap = ending.querySelector('.visual-title-wrap')
+const endingStorybook = endingStorybookWrap.querySelector('.title-storybook')
 var currentScroll = window.scrollY
 
 const anchorList = document.querySelector('.anchor-list')
@@ -36,6 +41,9 @@ anchorButton.forEach(element => {
         anchorContents.forEach(item => {
             if(data == item.dataset.anchor) {
                 window.scrollTo({top: item.offsetTop, behavior: "smooth"})
+            }
+            if(data == "storybook") {
+                window.scrollTo({top: ending.offsetTop, behavior: "smooth"})
             }
         });
     })
@@ -75,7 +83,7 @@ gsap.to(containerInner, {
 gsap.to(titleNo, {
     scrollTrigger: {
         trigger: intro,
-        start: "-=80% top",
+        start: "-60% top",
         end: "50% bottom",
         scrub: true,
     },
@@ -99,9 +107,28 @@ gsap.to(titleCode, {
         end: "60% bottom",
         scrub: true,
     },
-    top: "60%",
+    top: "660%",
     left: "10%",
-    fontSize: "62px"
+    fontSize: "62px",
+    color: "#0D0D0D"
+})
+gsap.to(titleAnd, {
+    scrollTrigger: {
+        trigger: intro,
+        start: "top bottom",
+        end: "60% bottom",
+        scrub: true,
+    },
+    opacity: 0
+})
+gsap.to(titleStorybook, {
+    scrollTrigger: {
+        trigger: intro,
+        start: "top bottom",
+        end: "60% bottom",
+        scrub: true,
+    },
+    opacity: 0
 })
 
 gsap.to(bubbleLogo,{
@@ -148,17 +175,36 @@ gsap.to(glideLogo,{
         scrub: 0.5,
     },
     ease: "power4.in",
-    transform: "translate(-1000%, -1000%) scale(200)"
+    transform: "translate(-1000%, -1000%) scale(300)"
 })
 
+gsap.to(endingStorybookWrap, {
+    scrollTrigger: {
+        trigger: '.intro-story-area',
+        pin: endingStorybook,
+        start: "top-=70% top",
+        end: "top+=30% top",
+        scrub: true,
+    },
+})
+gsap.to(endingStorybook, {
+    scrollTrigger: {
+        trigger: '.intro-story-area',
+        start: "top-=65% top",
+        end: "top+=20% bottom",
+        scrub: true,
+    },
+    fontSize: "140px",
+    color: "#ff4586"
+})
 gsap.to(storybookLogo,{
     scrollTrigger: {
         trigger: storybookLogoArea,
         pin: storybookLogoArea,
         start: "top top",
-        end: "top+=200% top",
+        end: "top+=230% top",
         scrub: 0.5,
     },
     ease: "power4.in",
-    transform: "translate(0, 0%) scale(250)"
+    transform: "translate(-700%, 4500%) scale(250)"
 })

@@ -52,7 +52,9 @@
             .anchor-list {
                 display: flex;
                 flex-wrap: wrap;
+                flex-direction: column;
                 justify-content: flex-end;
+                align-items: flex-end;
                 gap: 5px;
                 position: fixed;
                 top: 20px;
@@ -79,7 +81,7 @@
             padding-bottom: 160px;
             .intro {
                 position: relative;
-                padding-left: 50%;
+                padding-left: 45%;
                 padding-right: 290px;
                 .big-tit {
                     color: #fff;
@@ -97,13 +99,14 @@
                             position: relative;
                             font-size: 100px;
                             letter-spacing: 10px;
+                            color: #A6A6A6;
                             color: #f2f2f2;
                         }
                         &.title-no {
                             position: absolute;
-                            font-size: 187px;
+                            font-size: 210px;
                             letter-spacing: 36px;
-                            color: #A6A6A6;
+                            color: #f2f2f2;
                             top: 465%;
                             left: 0;
                         }
@@ -111,17 +114,17 @@
                             position: absolute;
                             top: 465%;
                             left: 21%;
-                            font-size: 187px;
+                            font-size: 210px;
                             letter-spacing: 36px;
-                            color: #A6A6A6;
+                            color: #f2f2f2;
                         }
-                        &.title-sample {
+                        &.title-and {
                             position: absolute;
-                            top: 140%;
-                            left: 23%;
+                            top: 461%;
+                            left: 63%;
                             font-size: 187px;
                             letter-spacing: 36px;
-                            color: #fff;
+                            color: #f2f2f2;
                         }
                         &.title-storybook {
                             position: absolute;
@@ -129,7 +132,7 @@
                             left: 0;
                             font-size: 187px;
                             letter-spacing: 36px;
-                            color: #A6A6A6;
+                            color: #f2f2f2;
                         }
                     }
                 }
@@ -268,7 +271,7 @@
                                             }
                                         }
                                         .back-project {
-                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-bubble.png') no-repeat;
+                                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-bubble.png') no-repeat;
                                             background-position: 0 -1px;
                                             &:hover {
                                                 &::before {
@@ -319,7 +322,7 @@
                                             }
                                         }
                                         .back-project {
-                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-softr.png') no-repeat;
+                                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-softr.png') no-repeat;
                                             // background-position: center -100px;
                                             &:hover {
                                                 &::before {
@@ -370,7 +373,7 @@
                                             }
                                         }
                                         .back-project {
-                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-softr.png') no-repeat;
+                                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-softr.png') no-repeat;
                                             background-position: center -100px;
                                             &:hover {
                                                 &::before {
@@ -412,7 +415,7 @@
                                             }
                                         }
                                         .back-project {
-                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-webflow.png') no-repeat;
+                                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-webflow.png') no-repeat;
                                             width: 100%;
                                             background-position: center -100px;
                                             &:hover {
@@ -473,7 +476,7 @@
                                             }
                                         }
                                         .back-project {
-                                            background: url('https://95choijh.github.io/noCode/dist/assets/images/project-storybook.png') no-repeat;
+                                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-storybook.png') no-repeat;
                                             background-position: center -100px;
                                             &:hover {
                                                 &::before {
@@ -486,6 +489,193 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+            .ending {
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 100vh;
+                }
+                .title {
+                    &.title-storybook {
+                        position: absolute;
+                        top: 25%;
+                        left: 2%;
+                        font-family: 'GmarketSansMedium';
+                        font-size: 320px;
+                        color: #0D0D0D;
+                    }
+                }
+                .intro-story-area {
+                    position: relative;
+                    padding-left: 50%;
+                    padding-right: 290px;
+                    .intro-list {
+                        .tit {
+                            position: relative;
+                            font-size: 36px;
+                            font-weight: 700;
+                            color: #0D0D0D;
+                            &::before {
+                                content: '▶ ';
+                                position: absolute;
+                                top: 50%;
+                                left: -30px;
+                                font-size: 21px;
+                                transform: translateY(-50%);
+                            }
+                            +.nr-list {
+                                padding-top: 30px;
+                            }
+                        }
+                        .nr-list {
+                            .des {
+                                line-height: 24px;
+                                font-size: 16px;
+                                color: #262626;
+                                .subject {
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        +.intro-list {
+                            padding-top: 100px;
+                        }
+                    }
+                }
+            }
+            .project-storybook {
+                position: relative;
+                .logo-area {
+                    position: relative;
+                    height: 55vh;
+                    .logo {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 300px;
+                        pointer-events: none;
+                        transform: translate(-50%, 20%);
+                    }
+                }
+                .nr-list.case2 {
+                    position: relative;
+                    .tit {
+                        margin-bottom: 60vh;
+                        font-family: "Classic";
+                        font-size: 180px;
+                        font-weight: 700;
+                        text-align: center;
+                        color: #282b44;
+                    }
+                    .item {
+                        display: flex;
+                        gap: 32px;
+                        flex-direction: column;
+                        align-items: center;
+                        .s-tit {
+                            color: #282b44;
+                        }
+                        .box-area {
+                            gap: 12px;
+                        }
+                        .box-list {
+                            .box-item {
+                                width: 950px;
+                                background-color: #282b44;
+                            }
+                            .des {
+                                color: #ffffff;
+                                a {
+                                    color: #fff;
+                                }
+                            }
+                            &.use {
+                                .des {
+                                    display: flex;
+                                    gap: 12px;
+                                }
+                            }
+                            &.strength,
+                            &.weakness {
+                                .box-item {
+                                    width: 750px;
+                                }
+                            }
+                        }
+                        .back-project1 {
+                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-storybook1.png') no-repeat;
+                            background-position: 0 -100px;
+                            &:hover {
+                                &::before {
+                                    color: #ffffff;
+                                }
+                                &::after {
+                                    background-color: #282b44;
+                                }
+                            }
+                        }
+                        .back-project2 {
+                            background: url('https://95choijh.github.io/2tt/dist/assets/images/project-storybook2.png') no-repeat;
+                            background-position: center -100px;
+                            &:hover {
+                                &::before {
+                                    color: #ffffff;
+                                }
+                                &::after {
+                                    background-color: #282b44;
+                                }
+                            }
+                        }
+                        
+                        .s-tit {
+                            font-family: "Classic";
+                            font-size: 128px;
+                            font-weight: 100;
+                            text-align: center;
+                        }
+                        .back-project1,
+                        .back-project2 {
+                            position: relative;
+                            display: block;
+                            height: 680px;
+                            &:hover {
+                                &::before {
+                                    opacity: 1;
+                                }
+                                &::after {
+                                    opacity: 1;
+                                }
+                            }
+                            &::before {
+                                content: 'view page';
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                font-family: "Classic";
+                                font-size: 48px;
+                                font-weight: 700;
+                                opacity: 0;
+                                transform: translate(-50%, -50%);
+                                transition: .3s ease;
+                                z-index: 1;
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                left: 0;
+                                border-radius: 32px;
+                                opacity: 0;
+                                transition: .3s ease;
                             }
                         }
                     }
