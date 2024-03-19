@@ -182,15 +182,15 @@ gsap.to(endingStorybookWrap, {
     scrollTrigger: {
         trigger: '.intro-story-area',
         pin: endingStorybook,
-        start: "top-=70% top",
-        end: "top+=30% top",
+        start: "top-=45% bottom",
+        end: "top+=40% top",
         scrub: true,
     },
 })
 gsap.to(endingStorybook, {
     scrollTrigger: {
         trigger: '.intro-story-area',
-        start: "top-=65% top",
+        start: "top-=85% top",
         end: "top+=20% bottom",
         scrub: true,
     },
